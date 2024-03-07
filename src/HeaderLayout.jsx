@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import clsx from 'clsx';
-import {NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom';
+
 
 export default class HeaderLayout extends Component {
   render() {

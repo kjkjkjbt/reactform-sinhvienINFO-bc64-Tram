@@ -101,7 +101,7 @@ export default class ProductForm extends Component {
                   Mã SV 
                 </label>
                 <input
-                  data-type="number"
+                  datatype="number"
                   type="text"
                   className="form-control"
                   name="id"
@@ -120,7 +120,7 @@ export default class ProductForm extends Component {
                 </label>
                 <input
                   type="text"
-                  data-type="string"
+                  datatype="string"
                   className="form-control"
                   name="tenSp"
                   value={nameSv}
@@ -138,9 +138,9 @@ export default class ProductForm extends Component {
                   Số điện thoại 
                 </label>
                 <input
-                  type="url"
+                  type="number"
                   className="form-control"
-                  name="img"
+                  name="tel"
                   value={tel}
                   placeholder="Insert telephone number here "
                   onInput={this.handleChangeInput}
@@ -154,9 +154,9 @@ export default class ProductForm extends Component {
                   Email 
                 </label>
                 <input
-                  type="number"
+                  type="email"
                   className="form-control"
-                  name="price"
+                  name="email"
                   value={email}
                   placeholder="Please insert your email"
                   onInput={this.handleChangeInput}
