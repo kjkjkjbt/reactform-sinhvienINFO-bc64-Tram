@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react'
-import ProductForm from './ProductForm';
-
+import StudentForm from './StudentForm';
 export default class ReactForm extends Component {
   state={
     arrSV: [
@@ -45,7 +44,7 @@ export default class ReactForm extends Component {
   };
   handleUpdateSv =(svUpdate)=>{
     console.log('handleUpdateSv', svUpdate)
-    let index = this.state.arrSV.findIndex((item)=>(item.id===svUpdate.id));
+    let index = this.state.arrSV.findIndex((item)=>(item.id===svUpdate.id))
     this.state.arrSV[index]=svUpdate;
     this.setState({
       arrSV: this.state.arrSV
@@ -56,12 +55,12 @@ export default class ReactForm extends Component {
     return (
       <div>
         <h3>Thông Tin Sinh Viên  </h3>
-        <ProductForm>
+        <StudentForm>
           handleUpdateSv = {this.handleUpdateSv}
           addStudent={this.handleAddSv}
           removeStudent={this.handleRemoveSv}
           editStudent={this.handleEditSv}
-        </ProductForm>
+        </StudentForm>
         <table>
           <thead>
             <tr>
