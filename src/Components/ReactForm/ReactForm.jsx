@@ -17,12 +17,12 @@ export default class ReactForm extends Component {
         email: '',
       },
     ],
-    //  svEdit:{
-    //   id: 1,
-    //   name:'hahaha',
-    //   tel: '',
-    //   email: '',
-    // },
+     svEdit:{
+      id: 1,
+      name:'hahaha',
+      tel: '',
+      email: '',
+    },
   };
   handleAddSv =(clickSv)=>{
     let arrUpdate= [...this.state.arrSV];
@@ -32,7 +32,7 @@ export default class ReactForm extends Component {
     });
   };
   handleRemoveSv=(idSv)=>{
-    let newArrSv =this.state.arrSV.filter ((item)=>item.id !== idSv,);
+    let newArrSv =this.state.arrSV.filter ((item)=>item.id !== idSv);
     this.setState({
       arrSV:newArrSv,
     });
@@ -44,7 +44,7 @@ export default class ReactForm extends Component {
   };
   handleUpdateSv =(svUpdate)=>{
     console.log('handleUpdateSv', svUpdate)
-    let index = this.state.arrSV.findIndex((item)=>(item.id===svUpdate.id))
+    let index = this.state.arrSV.findIndex((item)=>(item.id==svUpdate.id))
     this.state.arrSV[index]=svUpdate;
     this.setState({
       arrSV: this.state.arrSV
@@ -57,9 +57,9 @@ export default class ReactForm extends Component {
         <h3>Thông Tin Sinh Viên  </h3>
         <StudentForm>
           handleUpdateSv = {this.handleUpdateSv}
-          addStudent={this.handleAddSv}
-          removeStudent={this.handleRemoveSv}
-          editStudent={this.handleEditSv}
+          handleAddSv={this.handleAddSv}
+          handleRemoveSv={this.handleRemoveSv}
+          svEdit={this.state.svEdit}
         </StudentForm>
         <table>
           <thead>

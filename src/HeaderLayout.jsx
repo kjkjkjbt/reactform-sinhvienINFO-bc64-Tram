@@ -65,7 +65,7 @@ export default class HeaderLayout extends Component {
                         return "";
                       }
                     }, "nav-link")}
-                    to="bt-life-cycle"
+                    to="life-cycle"
                   >
                     Lifecycle
                   </NavLink>

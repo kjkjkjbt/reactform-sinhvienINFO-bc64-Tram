@@ -138,7 +138,7 @@ export default class StudentForm extends Component {
                   Số điện thoại
                 </label>
                 <input
-                  type="number"
+                  type="number"                  datatype="number"
                   className="form-control"
                   name="tel"
                   value={tel}
@@ -155,6 +155,7 @@ export default class StudentForm extends Component {
                 </label>
                 <input
                   type="email"
+                  datatype="string"
                   className="form-control"
                   name="email"
                   value={email}
@@ -182,7 +183,7 @@ export default class StudentForm extends Component {
               this.props.handleUpdateSv(this.state.value);
             }}
           >
-            Update Students' Info
+            Update  Info
           </button>
         </form>
       </div>
